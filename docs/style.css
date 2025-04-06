@@ -1,0 +1,159 @@
+/*
+
+    Couleur Principale: #4D2465
+    Couleur Secondaire: #EA526F
+    Couleur d'Accentuation: #048A81
+    Couleur de Texte: #070600
+    Couleur d'ArriÃ¨re Plan: #F7F7FF
+
+*/
+
+
+:root{
+    --color-principale:#4D2465;
+    --color-secondaire:#EA526F;
+    --color-accentuate:#048A81;
+    --color-texte: #070600;
+    --color-background: #F7F7FF;
+}
+
+body > div{
+    display: flex;
+    height: 88%;
+    justify-content: space-around;
+    align-items: stretch;
+    position: relative;
+}
+body {
+    overflow: hidden;
+    height: 100vh;
+    background-color: var(--color-background); 
+    font-family: Arial, sans-serif; 
+    /* padding: 20px;  */
+    margin: 0;
+}
+
+header h1{
+    color: var(--color-accentuate);
+    text-align: center;
+}
+nav h2{
+    color: var(--color-accentuate);
+    margin: 0.25em;
+}
+nav{
+    width: 100%;
+    /* padding: 2%; */
+    max-height: 100vh;
+    height: 100%;
+    max-width: 15vw;
+}
+nav >div{
+    height: 87%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accentuate) var(--color-background);
+    overflow-y: auto;
+    /* height: inherit; */
+}
+nav > div::-webkit-scrollbar {
+    border-radius: 30px;
+    width: 8px;
+}
+nav > div::-webkit-scrollbar-track {
+    background: var(--color-background);
+}
+
+nav > div::-webkit-scrollbar-thumb {
+    background-color: var(--color-secondaire); 
+    border-radius: 10px;
+}
+
+header{
+    background-color: var(--color-principale);
+    box-sizing: initial;
+    height: unset;
+    padding: 0.2em;
+    margin: 0;
+}
+
+  details { 
+    margin-left: 20px; 
+  }
+  
+  summary { 
+    cursor: pointer; 
+  }
+  
+  summary{
+    color: var(--color-principale);
+  }
+  .file-link {
+    margin-left: 10px;
+    display: block;
+    text-decoration: none;
+    color: var(--color-secondaire);
+    cursor: pointer;
+  }
+  
+  .file-link:hover { 
+    text-decoration: underline; 
+  }
+  #filename{
+    color: var(--color-principale);
+  }
+  #content {
+    box-sizing: border-box;
+    border: 5px solid var(--color-secondaire);
+    border-radius: 10px;
+    padding: 20px;
+    /* margin-top: 20px; */
+    width: 82vw;
+    height: 87%;
+    background: var(--color-texte);
+    color: var(--color-background);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accentuate) var(--color-texte);
+  }
+
+#content::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 30px;
+}
+
+#content::-webkit-scrollbar-thumb {
+    background-color: var(--color-accentuate);
+    border-radius: 10px;
+}
+
+#content::-webkit-scrollbar-track {
+    background: var(--color-texte);
+    border-radius: 10px;
+}
+@media screen and (max-width: 800px) {
+    body > div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        height: 100%;
+    }
+    nav > div {
+        height: 50%;
+    }
+    nav {
+        max-width: 90vw;
+        width: 90vw;
+        height: 20vh;
+        max-height: 20vh;
+        overflow-y: hidden;
+        position: relative;
+        z-index: 2;
+    }
+    
+    #content {
+        width: 90vw; 
+        height: 60vh;
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+}

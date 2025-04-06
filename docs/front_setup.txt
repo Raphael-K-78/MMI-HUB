@@ -1,0 +1,6 @@
+// prerequisites: npm package manager
+
+npm install -g @angular/cli
+ng new front // options when asked: No, CSS, No
+
+https://daisyui.com/docs/install/angular/

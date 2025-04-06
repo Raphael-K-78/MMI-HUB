@@ -1,0 +1,12 @@
+mkdir Back2Front
+cd Back2Front
+symfony new back --webapp
+git init
+git remote add origin https://github.com/Raphael-K-78/SAE403.git
+git fetch origin
+git checkout -b main origin/main
+git reset --hard origin/main
+git pull origin main --allow-unrelated-histories
+git status
+git checkout -b main origin/main
+git pull
